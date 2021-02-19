@@ -141,3 +141,52 @@
 //     console.log(avg /= x.length);
 // }
 // values([-9, -34, 1, 3, 5, 8, -8]);
+
+// 12. Given an array x (e.g. [1,5, 10, 7, -2]), create an algorithm (sets of instructions) that shifts each number by one (to the front).  For example when the program is done x (assuming it was [1,5,10,7,-2]) should become [5,10,7,-2, 0].  
+
+// function shift(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i+1] === undefined) {
+//       arr[i] = 0;
+//     }
+//     else {
+//       arr[i] = arr[i+1];
+//     }
+//   }
+//   return arr;
+// }
+// console.log(shift([1,5,10,7,-2]));
+
+// 13. Write a program that takes an array of numbers and replaces any number that's negative to a string called 'Dojo'. For example if array = [-1, -3, 2] after your program is done array should be ['Dojo', 'Dojo', 2].
+
+// function string(arr) {
+//     for (let i = 0; i < arr.length; i++) {
+//       if (arr[i] < 0) {
+//         arr[i] = "Dojo";
+//       }
+//     }
+//     return arr;
+//   }
+//   console.log(string([-1,-3,2]));
+
+// 14. Write a program that takes an array of numbers and returns an array where the first and last numbers in the array have been switched.For example say x = [2, 3, 5, 7, 6]. By the end of the program x, should be [6, 3, 5, 7, 2]. Do this without creating an empty array.
+
+// function swap(arr) {
+//     let temp = arr[0];
+//     arr[0] = arr[arr.length - 1];
+//     arr[arr.length - 1] = temp;
+//     return arr;
+// }
+// console.log(swap([-2, 3, 5, 7, 9]));
+
+// 15. Given an array X of multiple values (e.g. [-3,5,1,3,2,10]), write a program that reverses the values in the array.  Once your program is done X should be in the reserved order.  Do this without creating a temporary array.  Also, do NOT use the reverse method but find a way to reverse the values in the array (HINT: swap the first value with the last; second with the second to last and so forth).
+
+// function reversing(x) {
+//     for (let i = 0; i < x.length/2; i++) {
+//       let temp = x[i];
+//       x[i] = x[x.length - 1 - i];
+//       x[x.length - 1 - i] = temp;
+//     }
+//     return x;
+//   }
+//   console.log(reversing([-3,5,1,3,2,10]))
