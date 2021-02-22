@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -24,10 +25,15 @@ export default class CreateExercises extends Component {
 
     // hardcoding a single user
     componentDidMount() { // this will automatically be called right before anything loads onto the page
-        this.setState({
-            users: ['test user'],
-            username: 'test user'
-        })
+        axios.get('http://localhost:5000/users/')
+            .then(response => {
+                if (response.data.length > 0) {
+                    this.setState({
+                        users: response.data.map(user => user.username),
+                        username: response.data[0].username
+                    })
+                }   //checking if there is a response 
+            })
     }
 
     // when the username is being changed, we're going to set the state (updating username)
@@ -66,6 +72,11 @@ export default class CreateExercises extends Component {
         }
 
         console.log(exercise);
+
+        // sending user data to the backend
+        axios.post('http://localhost:5000/exercises/add', exercise)
+        .then(res => console.log(res.data));
+
 
         // after exercise has been submitted, we will take the person back to homepage(list of exercises)
         window.location = '/';
