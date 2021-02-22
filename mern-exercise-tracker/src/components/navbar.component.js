@@ -3,10 +3,10 @@ import {Link} from 'react-router-dom';
 
 export default class Navbar extends Component { // all components start like this
 
-    render() {  //all components render something
+    render() {  // all components render something
         return (
-            <nav className = "kavbar navbar-dark bg-dark navbar-expand-lg">
-                <Link to="/" className="navbar-brand"> ExcerTracker</Link>
+            <nav className = "navbar navbar-dark bg-dark navbar-expand-lg">
+                <Link to="/" className="navbar-brand">ExcerTracker</Link>
                 <div className="collapse navbar-collapse">
                     <ul className="navbar-nav mr-auto">
                         <li className="navbar-item">
@@ -23,10 +23,4 @@ export default class Navbar extends Component { // all components start like thi
             </nav>
         )
     }
-
-
-
-
-
-
 }
