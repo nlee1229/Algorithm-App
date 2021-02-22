@@ -31,7 +31,7 @@ const exerciseRouter = require('./routes/exercises');
 const usersRouter = require('./routes/users');
 
 // for ex. if we go to rooturl/exercises, it'll load everything in the exercisesRouter
-app.use('/exercises', exercisesRouter);
+app.use('/exercises', exerciseRouter);
 app.use('/users', usersRouter);
 
 // what starts the server. Listens on a certain port!
