@@ -215,14 +215,33 @@
 //   }
 //   console.log(reversing([-3,5,1,3,2,10]))
 
-// 16. Write a program that inserts a new number X at an index Y. For example if array = [1, 3, 5, 7] and X = 10, and Y = 2, by the end of your program array should be [1, 3, 10, 5, 7] (in other words we added '10' on index 2). 
- function insert(arr) {
-     let x = 10;
-     let y = 2;
-    for (let i = 0; i < arr.length; i++) {
-        let temp = arr[i];
-        arr.push(temp(y));
+// 16.---------REDOOOOOOOOO   Write a program that inserts a new number X at an index Y. For example if array = [1, 3, 5, 7] and X = 10, and Y = 2, by the end of your program array should be [1, 3, 10, 5, 7] (in other words we added '10' on index 2). 
+//  function insert(arr) {
+//      let x = 10;
+//      let y = 2;
+//     for (let i = 0; i < arr.length; i++) {
+//         let temp = arr[i];
+//         arr.push(temp(y));
         
+//     }
+// }
+// console.log(insert([1,3,5,7]))
+
+// 17. Given an array of multiple values (e.g. [0, -1, 2, -3, 4, -5, 6]), write a program that removes any negative values in that array.  Once your program is done, the array should be composed of only the non-negative numbers, in their original order.  Do this without creating a temporary array; only use the pop() method to remove values from the array.
+
+function array(arr) {
+    let numNegatives = 0;
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] < 0) {
+        numNegatives++;
+      } else {
+        arr[i - numNegatives] = arr[i];
+      }
     }
-}
-console.log(insert([1,3,5,7]))
+    while (numNegatives--) {
+      arr.pop();
+    }
+    return arr;
+  }
+  console.log(array([0, -1, 2, -3, 5, -5, 6]))
+  
