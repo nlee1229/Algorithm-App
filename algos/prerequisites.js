@@ -82,6 +82,17 @@
 // }
 // console.log(oddy());
 
+// or 
+
+// function newArray() {
+//     let newArr = [];
+//     for(let i = 1; i <= 255; i+=2) {
+//         newArr.push(i);
+//     }
+//     console.log(newArr);
+// }
+// newArray();
+
 // 8. Write a program that takes an array and returns the number of values in that array whose value is greater than y. For example, if array = [1,3, 5, 7] and y = 3, after your program is run it will print 2 (since there are two values in the array whose value is greater than 3).  Again make sure you come up with a simple base case and write instructions to solve that base case first and then test your instructions for other complicated cases. You can use a count function with this assignment.
 
 // function greaterThanY(arr) {
@@ -95,6 +106,19 @@
 //   return counter;
 // }
 // console.log(greaterThanY([1, 3, 5, 7, 9]));
+
+// or 
+
+// function greaterThanY(arr, y) {
+//     let counter = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] > y) {
+//             counter++;
+//         }
+//     }
+//     console.log(counter);
+// }
+// greaterThanY([1,2,3,4], 3);
 
 // 9. Given an array x(e.g. [1, 5, 10, -2]), create an algorithm(sets of instructions) that squares each value in the array.When the program is done x should have values that have been squared(e.g. [1, 25, 100, 4]).You're not to use any of the pre-built function in Javascript.  You could for example square the value by saying x[i] = x[i] * x[i];]
 
@@ -190,3 +214,15 @@
 //     return x;
 //   }
 //   console.log(reversing([-3,5,1,3,2,10]))
+
+// 16. Write a program that inserts a new number X at an index Y. For example if array = [1, 3, 5, 7] and X = 10, and Y = 2, by the end of your program array should be [1, 3, 10, 5, 7] (in other words we added '10' on index 2). 
+ function insert(arr) {
+     let x = 10;
+     let y = 2;
+    for (let i = 0; i < arr.length; i++) {
+        let temp = arr[i];
+        arr.push(temp(y));
+        
+    }
+}
+console.log(insert([1,3,5,7]))
